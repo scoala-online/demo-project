@@ -1,0 +1,28 @@
+{
+  "npmScope": "programming-exam",
+  "affected": { "defaultBase": "master" },
+  "implicitDependencies": {
+    "workspace.json": "*",
+    "package.json": { "dependencies": "*", "devDependencies": "*" },
+    "tsconfig.base.json": "*",
+    "tslint.json": "*",
+    ".eslintrc.json": "*",
+    "nx.json": "*"
+  },
+  "tasksRunnerOptions": {
+    "default": {
+      "runner": "@nrwl/nx-cloud",
+      "options": {
+        "accessToken": "NmQ1MWYzZDAtYmFkOS00ZTEyLWFiYmMtMzk3ZTg0MWY2NzU0fHJlYWQtd3JpdGU=",
+        "cacheableOperations": ["build", "test", "lint", "e2e"],
+        "canTrackAnalytics": false,
+        "showUsageWarnings": true
+      }
+    }
+  },
+  "projects": {
+    "java-api": { "tags": [] },
+    "react-app": { "tags": [] },
+    "react-app-e2e": { "tags": [], "implicitDependencies": ["react-app"] }
+  }
+}
