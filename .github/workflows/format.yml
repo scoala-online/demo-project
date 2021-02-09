@@ -28,7 +28,6 @@ jobs:
           node-version: '12'
       
       # Format Checking
-      - name: Format checking
       - run: git fetch --no-tags --prune --depth=5 origin ${{ github.event.pull_request.base.ref }}
       - run: npm ci
       - run: npm run format:check -- --base=origin/${{ github.event.pull_request.base.ref }}.
