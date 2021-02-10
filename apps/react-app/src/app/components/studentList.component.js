@@ -80,10 +80,10 @@ export default class StudentList extends React.Component {
                   },
                 }}
               >
-                <Button variant="info">Update</Button>
+                <Button variant="dark">Update</Button>
               </Link>{' '}
               <Button
-                variant="danger"
+                variant="light"
                 onClick={(e) => this.deleteStudent(student.id, e)}
               >
                 Delete
@@ -98,7 +98,7 @@ export default class StudentList extends React.Component {
       <Container>
         <h3 style={{ textAlign: 'center' }}>Student List</h3>
         <Link to={'/create'}>
-          <Button variant="outline-info">Add new Student</Button>
+          <Button variant="outline-dark">Add new Student</Button>
         </Link>
         <Container>
           <Row>
