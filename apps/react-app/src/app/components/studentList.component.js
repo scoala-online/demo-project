@@ -96,7 +96,7 @@ export default class StudentList extends React.Component {
 
     return (
       <Container>
-        <h3 style={{ textAlign: 'center' }}>Employee List</h3>
+        <h3 style={{ textAlign: 'center' }}>Student List</h3>
         <Link to={'/create'}>
           <Button variant="outline-info">Add new Student</Button>
         </Link>
