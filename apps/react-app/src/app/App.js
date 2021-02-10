@@ -1,9 +1,11 @@
-import './App.css';
-import StudentList from './component/studentList.component';
-import { BrowserRouter as Router, Switch, Route } from 'react-router-dom';
-import StudentUpdate from './component/studentUpdate.component';
-import StudentCreate from './component/studentCreate.component';
 import React from 'react';
+import { BrowserRouter as Router, Switch, Route } from 'react-router-dom';
+
+import './App.css';
+
+import StudentList from './components/studentList.component';
+import StudentUpdate from './components/studentUpdate.component';
+import StudentCreate from './components/studentCreate.component';
 
 function App() {
   return (
