@@ -61,7 +61,7 @@ class StudentCreate extends React.Component {
       .then((response) => {
         console.log('createStudent Response :');
         console.log(response.data);
-        this.props.history.push("/students");
+        this.props.history.push('/students');
       })
       .catch((e) => {
         console.log(e);

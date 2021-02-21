@@ -48,7 +48,7 @@ class StudentUpdate extends React.Component {
       .then((response) => {
         console.log('updateStudent Response :');
         console.log(response.data);
-        this.props.history.push("/students");
+        this.props.history.push('/students');
       })
       .catch((e) => {
         console.log(e);
