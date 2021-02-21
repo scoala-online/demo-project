@@ -1,9 +1,9 @@
 import React from 'react';
 import httpService from '../services/httpService';
 import { Row, Col, Container, Button } from 'react-bootstrap';
-import { Link } from 'react-router-dom';
+import { Link, withRouter } from 'react-router-dom';
 
-export default class StudentCreate extends React.Component {
+class StudentCreate extends React.Component {
   constructor(props) {
     super(props);
 
@@ -61,6 +61,7 @@ export default class StudentCreate extends React.Component {
       .then((response) => {
         console.log('createStudent Response :');
         console.log(response.data);
+        this.props.history.push('/students');
       })
       .catch((e) => {
         console.log(e);
@@ -150,3 +151,5 @@ export default class StudentCreate extends React.Component {
     );
   }
 }
+
+export default withRouter(StudentCreate);

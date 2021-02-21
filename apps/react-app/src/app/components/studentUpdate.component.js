@@ -1,9 +1,9 @@
 import React from 'react';
 import httpService from '../services/httpService';
 import { Row, Col, Container, Button } from 'react-bootstrap';
-import { Link } from 'react-router-dom';
+import { Link, withRouter } from 'react-router-dom';
 
-export default class StudentUpdate extends React.Component {
+class StudentUpdate extends React.Component {
   constructor(props) {
     super(props);
 
@@ -48,6 +48,7 @@ export default class StudentUpdate extends React.Component {
       .then((response) => {
         console.log('updateStudent Response :');
         console.log(response.data);
+        this.props.history.push('/students');
       })
       .catch((e) => {
         console.log(e);
@@ -176,3 +177,4 @@ export default class StudentUpdate extends React.Component {
     );
   }
 }
+export default withRouter(StudentUpdate);
